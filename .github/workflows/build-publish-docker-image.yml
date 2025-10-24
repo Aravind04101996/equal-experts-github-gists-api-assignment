@@ -32,4 +32,4 @@ jobs:
                 IMAGE_VERSION: 1.0.0
             run: |
                docker build -t ${{ env.ECR_REPOSITORY_URL }}/github-gists-api:${{ env.IMAGE_VERSION}} .
-               docker push ${{ env.ECR_REPOSITORY_URL }}/github-gists-api:${{ env.IMAGE_VERSION}} .
+               docker push ${{ env.ECR_REPOSITORY_URL }}/github-gists-api:${{ env.IMAGE_VERSION}}
