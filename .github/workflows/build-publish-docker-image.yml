@@ -1,0 +1,15 @@
+name: Build & Deploy Docker image to ECR
+on: push
+jobs:
+    build_docker_image_to_ecr:
+        name: build_docker_image_to_ecr
+        runs-on: ubuntu-latest
+        steps:
+          - name: checkout-code
+            uses: actions/checkout@v5
+            with:
+                ref: main
+        
+          - name: Build Docker Image
+            run: |
+               docker build -t github-gists-api:1.0.0 .
